@@ -12,7 +12,7 @@ import java.io.IOException
 
 class AppListViewModel(repository: AptoideRepository) : ViewModel() {
     private val aptoideRepository: AptoideRepository = repository
-    private val appList = aptoideRepository.apps
+    val appList = aptoideRepository.apps
     var dataState = MutableLiveData<Boolean>()
 
     init {

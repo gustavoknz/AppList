@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import com.kieling.aptoide.dagger.DaggerFragmentComponent
 import com.kieling.aptoide.dagger.FragmentComponent
 import com.kieling.aptoide.databinding.FragmentAppListBinding
@@ -46,6 +47,15 @@ class AppListFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val adapter = AppAdapter()
+        binding.listRecyclerView.adapter = adapter
+        binding.listRecyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
+        viewModel.appList.observe(viewLifecycleOwner, { apps ->
+            apps.apply {
+                binding.listProgressBar.visibility = View.GONE
+                adapter.appList = apps
+            }
+        })
         viewModel.dataState.observe(viewLifecycleOwner, { dataState ->
             if (!dataState) {
                 AlertDialog.Builder(requireActivity())
