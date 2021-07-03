@@ -1,7 +1,9 @@
-package com.kieling.aptoide
+package com.kieling.aptoide.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.kieling.aptoide.AptoideApplication
+import com.kieling.aptoide.R
 
 class MainActivity : AppCompatActivity() {
     val appComponent by lazy {

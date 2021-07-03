@@ -2,7 +2,7 @@ package com.kieling.aptoide.dagger
 
 import androidx.room.Room
 import com.kieling.aptoide.AptoideApplication
-import com.kieling.aptoide.MainActivity
+import com.kieling.aptoide.view.MainActivity
 import com.kieling.aptoide.db.AptoideDao
 import com.kieling.aptoide.db.AptoideDatabase
 import com.kieling.aptoide.network.AptoideApiService
