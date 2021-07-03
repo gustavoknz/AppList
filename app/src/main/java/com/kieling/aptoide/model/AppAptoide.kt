@@ -14,5 +14,13 @@ data class AppAptoide(
 
     @ColumnInfo(name = "app_name")
     @Json(name = "name")
-    var name: String?
+    var name: String?,
+
+    @ColumnInfo(name = "app_rating")
+    @Json(name = "rating")
+    var rating: Float?,
+
+    @ColumnInfo(name = "app_icon")
+    @Json(name = "icon")
+    var icon: String?
 )
