@@ -1,4 +1,4 @@
-package com.kieling.aptoide
+package com.kieling.aptoide.db
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.LiveData
@@ -6,8 +6,6 @@ import androidx.lifecycle.Observer
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.kieling.aptoide.db.AptoideDao
-import com.kieling.aptoide.db.AptoideDatabase
 import com.kieling.aptoide.model.AppAptoide
 import org.junit.After
 import org.junit.Assert.*
@@ -22,7 +20,7 @@ import java.util.concurrent.TimeUnit
 import java.util.concurrent.TimeoutException
 
 @RunWith(AndroidJUnit4::class)
-class AppAptoideTest {
+class DatabaseTest {
     private lateinit var dao: AptoideDao
     private lateinit var db: AptoideDatabase
     private val appList = listOf(
