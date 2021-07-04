@@ -1,11 +1,11 @@
 package com.kieling.aptoide.view
 
-import android.app.AlertDialog
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
@@ -58,14 +58,7 @@ class AppListFragment : Fragment() {
         })
         viewModel.dataState.observe(viewLifecycleOwner, { dataState ->
             if (!dataState) {
-                AlertDialog.Builder(requireActivity())
-                    .setTitle("Error")
-                    .setMessage("Error loading data")
-                    .setPositiveButton("OK") { dialog, _ ->
-                        dialog.dismiss()
-                    }
-                    .create()
-                    .show()
+                Toast.makeText(context, "Error loading data", Toast.LENGTH_LONG).show()
             }
         })
     }
