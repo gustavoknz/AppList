@@ -16,6 +16,9 @@ interface AptoideDao {
     @Query("SELECT * FROM app_table ORDER BY app_name ASC")
     fun getAll(): LiveData<List<AppAptoide>>
 
+    @Query("SELECT * FROM app_table WHERE id = :id")
+    fun getApp(id: Long): AppAptoide
+
     @Query("DELETE FROM app_table")
     fun clear()
 }
