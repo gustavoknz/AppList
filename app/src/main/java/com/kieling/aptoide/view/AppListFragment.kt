@@ -2,6 +2,7 @@ package com.kieling.aptoide.view
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,9 +10,11 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import com.kieling.aptoide.R
 import com.kieling.aptoide.dagger.DaggerFragmentComponent
 import com.kieling.aptoide.dagger.FragmentComponent
 import com.kieling.aptoide.databinding.FragmentAppListBinding
+import com.kieling.aptoide.extension.TAG
 import com.kieling.aptoide.repository.AptoideRepository
 import com.kieling.aptoide.viewmodel.AppListViewModel
 import javax.inject.Inject
@@ -47,9 +50,11 @@ class AppListFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        Log.d(TAG, "onViewCreated")
         val adapter = AppAdapter()
         binding.listRecyclerView.adapter = adapter
-        binding.listRecyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
+        binding.listRecyclerView.layoutManager =
+            GridLayoutManager(requireContext(), resources.getInteger(R.integer.layout_rows))
         viewModel.appList.observe(viewLifecycleOwner, { apps ->
             apps.apply {
                 binding.listProgressBar.visibility = View.GONE
