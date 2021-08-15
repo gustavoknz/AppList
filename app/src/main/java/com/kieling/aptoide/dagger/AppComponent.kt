@@ -2,6 +2,7 @@ package com.kieling.aptoide.dagger
 
 import androidx.room.Room
 import com.kieling.aptoide.AptoideApplication
+import com.kieling.aptoide.BuildConfig.BASE_URL
 import com.kieling.aptoide.view.MainActivity
 import com.kieling.aptoide.db.AptoideDao
 import com.kieling.aptoide.db.AptoideDatabase
@@ -39,10 +40,6 @@ class AptoideModule(private val context: AptoideApplication) {
 
 @Module
 class AptoideApiModule {
-
-    companion object {
-        const val BASE_URL = "https://ws2.aptoide.com/api/6/bulkRequest/api_list/"
-    }
 
     @Provides
     @Singleton
