@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Aptoide</string>
+    <string name="app_name">Applist</string>
     <string name="list_item_image_desc">App image</string>
     <string name="list_item_star_desc">App rating</string>
 </resources>

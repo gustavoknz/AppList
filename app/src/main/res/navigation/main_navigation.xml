@@ -6,6 +6,6 @@
 
     <fragment
         android:id="@+id/appListFragment"
-        android:name="com.kieling.aptoide.view.AppListFragment"
+        android:name="com.kieling.applist.view.AppListFragment"
         android:label="AppListFragment" />
 </navigation>

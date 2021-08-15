@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kieling.aptoide">
+    package="com.kieling.applist">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.kieling.aptoide.AptoideApplication"
+        android:name="com.kieling.applist.ApplistApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Aptoide">
+        android:theme="@style/Theme.Applist">
         <activity
-            android:name=".view.MainActivity"
+            android:name="com.kieling.applist.view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
