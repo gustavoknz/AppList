@@ -1,1 +1,1 @@
-Project using Kotlin, MVVN, RxJava, Dagger, Retrofit, Espresso and Glide
+Project using Kotlin, MVVM, Dagger, Retrofit, Espresso and Glide
